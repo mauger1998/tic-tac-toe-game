@@ -27,4 +27,10 @@ const playerFactory = (name, token) => {
 
 
 /*Gameboard Render Function*/
-//function renderGameBoard
+function renderGameBoard(gameBoard) {
+    for (let i = 0; i < gameBoard.length; i++) {
+        document.createElement("div");
+
+    }
+    
+}
