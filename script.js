@@ -2,6 +2,8 @@
 
 const gameBoardModule = () => {
     const gameBoard = ["", "", "", "", "", "", "", "", "" ]
+
+    return {gameBoard}
 }
 
 
