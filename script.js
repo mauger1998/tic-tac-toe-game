@@ -1,12 +1,14 @@
+const mainParent = document.querySelector(".appendBoardTo");
+
+
 /*Gameboard Object (Module)*/
 
-const gameBoardModule = () => {
-    const gameBoard = ["x", "o", "x", "o", "x", "o", "x", "o", "x" ]
+const gameBoard = new Array ("x", "o", "x", "o", "x", "o", "x", "o", "x" )
 
-    return {gameBoard}
-}
+    
 
-gameBoardModule();
+
+
 
 
 
@@ -28,9 +30,15 @@ const playerFactory = (name, token) => {
 
 /*Gameboard Render Function*/
 function renderGameBoard(gameBoard) {
-    for (let i = 0; i < gameBoard.length; i++) {
-        document.createElement("div");
+    for (let i = 0; i < 9; i++) {
+        let newSpace = document.createElement("div");
+        mainParent.appendChild(newSpace);
+        newSpace.textContent = gameBoard[i];
+        mainParent.classList.add("grid");
+        console.log(gameBoard[i])
 
-    }
+    } 
+    return;
     
-}
+};
+renderGameBoard(gameBoard);
