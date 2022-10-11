@@ -1,7 +1,7 @@
 /*Gameboard Object (Module)*/
 
 const gameBoardModule = () => {
-    const gameBoard = ["", "", "", "", "", "", "", "", "" ]
+    const gameBoard = ["x", "o", "x", "o", "x", "o", "x", "o", "x" ]
 
     return {gameBoard}
 }
