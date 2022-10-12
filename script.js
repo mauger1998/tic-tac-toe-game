@@ -148,4 +148,12 @@ function startGame() {
     renderBoard(gameBoardModule);
 }
 
+/*Global Code*/
+
+startButton.addEventListener("click", (e) => {
+    
+    startGame()
+    startButton.classList.add("dissapear")
+})
+
 
