@@ -76,6 +76,8 @@ const game = ((gameModule) => {
         
 })
 
+   
+
 
 
     function updateArray () {
@@ -118,10 +120,10 @@ const game = ((gameModule) => {
                 console.log("x wins")
             } else if (gameModule.board[2] == "o" && gameModule.board[4] == "o" && gameModule.board[6] == "o") {
                 console.log("o wins")
+            }  else if (!gameModule.board.includes("")) {
+                console.log("its a tie")
             }
-        
-    }
-    
+}
 })
 
 
