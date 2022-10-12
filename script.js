@@ -48,14 +48,32 @@ const game = ((gameModule) => {
 
     squares.forEach(square => {
         square.addEventListener("click", (e) => {
-            if(gameModule.whosTurn = "playerOne") {
+            checkForWinner();
+            if(gameModule.whosTurn == "playerOne" && square.textContent == "") {
                 square.textContent = "x";
+                console.log(gameModule.board)
+                gameModule.whosTurn = "playerTwo"
+            } else if (gameModule.whosTurn == "playerTwo" && square.textContent == "") {
+                square.textContent = "o";
+                gameModule.whosTurn = "playerOne";
             }
             
         })
-    
+        
 })
 
+updateArray()
+
+    function updateArray () {
+        for (let i = 0; i < squares.length; i++ ) {
+            
+        }
+    }
+
+    function checkForWinner() {
+        
+    }
+    
 })
 
 
@@ -70,6 +88,7 @@ function renderBoard (boardModule) {
         mainParent.classList.add("grid");
         newSquare.classList.add("squares");
         newSquare.classList.add("border");
+        newSquare.setAttribute("id", i )
     } 
     game(gameBoardModule)
 }
