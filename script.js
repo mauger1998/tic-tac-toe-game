@@ -51,10 +51,11 @@ const game = ((gameModule) => {
             checkForWinner();
             if(gameModule.whosTurn == "playerOne" && square.textContent == "") {
                 square.textContent = "x";
-                console.log(gameModule.board)
+                updateArray()
                 gameModule.whosTurn = "playerTwo"
             } else if (gameModule.whosTurn == "playerTwo" && square.textContent == "") {
                 square.textContent = "o";
+                updateArray()
                 gameModule.whosTurn = "playerOne";
             }
             
@@ -62,11 +63,12 @@ const game = ((gameModule) => {
         
 })
 
-updateArray()
+
 
     function updateArray () {
         for (let i = 0; i < squares.length; i++ ) {
-            
+            gameModule.board[i] = squares[i].textContent
+            console.log(gameModule)
         }
     }
 
@@ -88,7 +90,7 @@ function renderBoard (boardModule) {
         mainParent.classList.add("grid");
         newSquare.classList.add("squares");
         newSquare.classList.add("border");
-        newSquare.setAttribute("id", i )
+        newSquare.setAttribute("id", `square${i}` )
     } 
     game(gameBoardModule)
 }
