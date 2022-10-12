@@ -15,7 +15,9 @@ const mainParent = document.querySelector(".appendBoardTo");
             "o",
             "x"
 
-        ]
+        ],
+        whosTurn: "playerOne",
+
            
     } 
     return gameBoard;
@@ -24,22 +26,24 @@ const mainParent = document.querySelector(".appendBoardTo");
 
 /*Player Factories*/
 
-
-
-
-    
-
-
-
+let playerFactory = (name, marker) => {
+    return {name, marker}
+}
 
 
 
 
+/* Game */
 
-
-/*Flow Object */
 
 
 
 /*Gameboard Render Function*/
+
+function renderBoard (boardModule) {
+    for (let i = 0; i < boardModule.board.length; i++) {
+        let newSquare = document.createElement("div");
+        mainParent.appendChild(newSquare);
+    }
+}
 
