@@ -1,4 +1,5 @@
 const mainParent = document.querySelector(".appendBoardTo");
+const startButton = document.getElementById("start");
 
 
 /*Gameboard Object (Module)*/
@@ -55,7 +56,7 @@ const game = ((gameModule) => {
     ]
 
     let squares = document.querySelectorAll(".squares");
-    console.log(squares)
+    
 
     squares.forEach(square => {
         square.addEventListener("click", (e) => {
@@ -83,7 +84,7 @@ const game = ((gameModule) => {
     function updateArray () {
         for (let i = 0; i < squares.length; i++ ) {
             gameModule.board[i] = squares[i].textContent
-            console.log(gameModule)
+            
         }
     }
 
@@ -143,5 +144,8 @@ function renderBoard (boardModule) {
     game(gameBoardModule)
 }
 
+function startGame() {
+    renderBoard(gameBoardModule);
+}
 
 
