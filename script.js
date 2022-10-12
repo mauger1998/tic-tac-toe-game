@@ -42,8 +42,18 @@ const game = (() => {
     let activePlayer = playerOne;
     let winnderDeclared = false;
     let remainingSpots = 9;
+
+    let squares = document.querySelectorAll(".squares");
+    console.log(squares)
+
+    squares.forEach(square => {
+        square.addEventListener("click", (e) => {
+            console.log("square")
+        })
+    
 })
 
+})
 
 
 
@@ -55,6 +65,8 @@ function renderBoard (boardModule) {
         mainParent.appendChild(newSquare);
         newSquare.textContent = boardModule.board[i];
         mainParent.classList.add("grid");
-    }
+        newSquare.classList.add("squares")
+    } 
+    game();
 }
 
