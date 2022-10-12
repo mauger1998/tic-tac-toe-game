@@ -34,6 +34,15 @@ let playerFactory = (name, marker) => {
 
 
 /* Game */
+const game = (() => {
+
+    const playerOne = playerFactory("Player One", "x");
+    const playerTwo = playerFactory("Player Two", "o");
+
+    let activePlayer = playerOne;
+    let winnderDeclared = false;
+    let remainingSpots = 9;
+})
 
 
 
