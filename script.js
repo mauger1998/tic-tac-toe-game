@@ -65,15 +65,18 @@ const game = ((gameModule) => {
                 square.textContent = "x";
                 updateArray()
                 checkForWinner();
+                displayWinner();
                 gameModule.whosTurn = "playerTwo"
             } else if (gameModule.whosTurn == "playerTwo" && square.textContent == "") {
                 square.textContent = "o";
                 updateArray()
                 checkForWinner();
+                displayWinner();
                 gameModule.whosTurn = "playerOne";
             }
             
         })
+
         
 })
 
@@ -90,42 +93,81 @@ const game = ((gameModule) => {
 
     function checkForWinner() {
             if (gameModule.board[0] == "x" && gameModule.board[1] == "x" && gameModule.board[2] == "x") {
-               console.log("x wins")
+               let winnerInput = "x"
+               displayWinner(winnerInput)
             } else if (gameModule.board[0] == "o" && gameModule.board[1] == "o" && gameModule.board[2] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[3] == "x" && gameModule.board[4] == "x" && gameModule.board[5] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[3] == "o" && gameModule.board[4] == "o" && gameModule.board[5] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[6] == "x" && gameModule.board[7] == "x" && gameModule.board[8] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[6] == "o" && gameModule.board[7] == "o" && gameModule.board[8] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[0] == "x" && gameModule.board[3] == "x" && gameModule.board[6] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[0] == "o" && gameModule.board[3] == "o" && gameModule.board[6] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[1] == "x" && gameModule.board[4] == "x" && gameModule.board[7] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[1] == "o" && gameModule.board[4] == "o" && gameModule.board[7] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[2] == "x" && gameModule.board[5] == "x" && gameModule.board[8] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[2] == "o" && gameModule.board[5] == "o" && gameModule.board[8] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[0] == "x" && gameModule.board[4] == "x" && gameModule.board[8] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[0] == "o" && gameModule.board[4] == "o" && gameModule.board[8] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             } else if (gameModule.board[2] == "x" && gameModule.board[4] == "x" && gameModule.board[6] == "x") {
-                console.log("x wins")
+                let winnerInput = "x"
+                displayWinner(winnerInput)
             } else if (gameModule.board[2] == "o" && gameModule.board[4] == "o" && gameModule.board[6] == "o") {
-                console.log("o wins")
+                let winnerInput = "o"
+                displayWinner(winnerInput)
             }  else if (!gameModule.board.includes("")) {
-                console.log("its a tie")
+                let winnerInput = "its a tie"
+                displayWinner(winnerInput)
             }
+            
+         
 }
 })
+
+
+function displayWinner(winnerInput) {
+    if (winnerInput == "x" ) {
+        let winnerAnnouncement = document.createElement("div")
+        winnerAnnouncement.textContent = "x is the winner"
+        mainParent.appendChild(winnerAnnouncement)
+        winnerAnnouncement.classList.add("absolute")
+    } else if (winnerInput == "o") {
+        let winnerAnnouncement = document.createElement("div")
+        winnerAnnouncement.textContent = "o is the winner"
+        mainParent.appendChild(winnerAnnouncement)
+        winnerAnnouncement.classList.add("absolute")
+    } /*else if (winnerInput = "its a tie") {
+        let winnerAnnouncement = document.createElement("div")
+        winnerAnnouncement.textContent = "its a tie, play again?"
+        mainParent.appendChild(winnerAnnouncement)
+        winnerAnnouncement.classList.add("absolute")
+    }*/
+}
 
 
 
@@ -155,5 +197,7 @@ startButton.addEventListener("click", (e) => {
     startGame()
     startButton.classList.add("dissapear")
 })
+
+
 
 

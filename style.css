@@ -1,5 +1,6 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
 .appendBoardTo {
@@ -11,8 +12,8 @@
 
 .grid {
     display:grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
     place-content:center;
     
     
@@ -25,6 +26,7 @@
 
 .squares {
     cursor:pointer;
+    font-size: 70px;
 }
 
 #square1 {
@@ -65,4 +67,7 @@
 }
 .dissapear {
     display:none;
+}
+.absolute {
+    position:absolute;
 }
