@@ -1,5 +1,6 @@
 const mainParent = document.querySelector(".appendBoardTo");
 const startButton = document.getElementById("start");
+const resetButton = document.querySelector("#reset");
 
 
 /*Gameboard Object (Module)*/
@@ -156,17 +157,19 @@ function displayWinner(winnerInput) {
         winnerAnnouncement.textContent = "x is the winner"
         mainParent.appendChild(winnerAnnouncement)
         winnerAnnouncement.classList.add("absolute")
+        
     } else if (winnerInput == "o") {
         let winnerAnnouncement = document.createElement("div")
         winnerAnnouncement.textContent = "o is the winner"
         mainParent.appendChild(winnerAnnouncement)
         winnerAnnouncement.classList.add("absolute")
-    } /*else if (winnerInput = "its a tie") {
+    } else if (winnerInput == "its a tie") {
         let winnerAnnouncement = document.createElement("div")
         winnerAnnouncement.textContent = "its a tie, play again?"
         mainParent.appendChild(winnerAnnouncement)
         winnerAnnouncement.classList.add("absolute")
-    }*/
+    }
+
 }
 
 
@@ -187,6 +190,19 @@ function renderBoard (boardModule) {
 }
 
 function startGame() {
+    gameBoardModule.board = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+
+    ]
+    gameBoardModule.whosTurn = "playerOne"
     renderBoard(gameBoardModule);
 }
 
@@ -198,6 +214,10 @@ startButton.addEventListener("click", (e) => {
     startButton.classList.add("dissapear")
 })
 
+resetButton.addEventListener("click", (e) => {
+    mainParent.innerHTML = "";
+    startButton.classList.remove("dissapear")
+})
 
 
 
