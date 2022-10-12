@@ -4,6 +4,7 @@
 
 .appendBoardTo {
     height:100vh;
+    
 }
 
 
@@ -14,13 +15,47 @@
     grid-template-rows: 50px 50px 50px;
     place-content:center;
     
+    
+    
 }
 
 .border {
-    border:1px solid black;
     text-align:center;
 }
 
 .squares {
     cursor:pointer;
+}
+
+#square1 {
+    border-top:white;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+    border-left:1px solid black;
+}
+#square2 {
+    border-top:white;
+    
+    border-bottom:1px solid black;
+    
+}
+#square3 {
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+    border-top:1px solid black;
+}
+#square4 {
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+    
+    
+}
+#square5 {
+    
+    border-bottom:1px solid black;
+    
+}
+#square7 {
+    border-right:1px solid black;
+    border-left:1px solid black;
 }
