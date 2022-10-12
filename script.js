@@ -34,7 +34,7 @@ let playerFactory = (name, marker) => {
 
 
 /* Game */
-const game = (() => {
+const game = ((gameModule) => {
 
     const playerOne = playerFactory("Player One", "x");
     const playerTwo = playerFactory("Player Two", "o");
@@ -48,7 +48,7 @@ const game = (() => {
 
     squares.forEach(square => {
         square.addEventListener("click", (e) => {
-            console.log("square")
+            console.log(gameModule.board)
         })
     
 })
@@ -67,6 +67,8 @@ function renderBoard (boardModule) {
         mainParent.classList.add("grid");
         newSquare.classList.add("squares")
     } 
-    game();
+    game(gameBoardModule)
 }
+
+
 
