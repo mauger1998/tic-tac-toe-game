@@ -5,15 +5,15 @@ const mainParent = document.querySelector(".appendBoardTo");
  let gameBoardModule = (() => {
     let gameBoard = {
             board: [
-            "x",
-            "o",
-            "x",
-            "o",
-            "x",
-            "o",
-            "x",
-            "o",
-            "x"
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
 
         ],
         whosTurn: "playerOne",
@@ -48,7 +48,10 @@ const game = ((gameModule) => {
 
     squares.forEach(square => {
         square.addEventListener("click", (e) => {
-            console.log(gameModule.board)
+            if(gameModule.whosTurn = "playerOne") {
+                square.textContent = "x";
+            }
+            
         })
     
 })
@@ -65,7 +68,8 @@ function renderBoard (boardModule) {
         mainParent.appendChild(newSquare);
         newSquare.textContent = boardModule.board[i];
         mainParent.classList.add("grid");
-        newSquare.classList.add("squares")
+        newSquare.classList.add("squares");
+        newSquare.classList.add("border");
     } 
     game(gameBoardModule)
 }
