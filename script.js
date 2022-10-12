@@ -44,6 +44,8 @@ function renderBoard (boardModule) {
     for (let i = 0; i < boardModule.board.length; i++) {
         let newSquare = document.createElement("div");
         mainParent.appendChild(newSquare);
+        newSquare.textContent = boardModule.board[i];
+        mainParent.classList.add("grid");
     }
 }
 
