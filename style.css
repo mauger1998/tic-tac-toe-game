@@ -71,3 +71,18 @@
 .absolute {
     position:absolute;
 }
+.hoverX {
+    background-image:url(x-mark-32.png);
+    opacity:0.5;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+.hoverY {
+    background-image:url(o-icon.png);
+    opacity:0.5;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    
+}

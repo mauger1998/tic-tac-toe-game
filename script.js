@@ -79,6 +79,14 @@ const game = ((gameModule) => {
         })
 
         
+
+        
+             
+            
+        
+
+
+        
 })
 
    
@@ -148,6 +156,8 @@ const game = ((gameModule) => {
             
          
 }
+
+
 })
 
 
@@ -218,6 +228,8 @@ resetButton.addEventListener("click", (e) => {
     mainParent.innerHTML = "";
     startButton.classList.remove("dissapear")
 })
+
+/*Hover Effect*/
 
 
 
